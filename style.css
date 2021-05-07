@@ -1,0 +1,49 @@
+.icerik{
+	width: 25%;
+	height: auto;
+	display: inline-block;
+	margin-right: 15px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px 2px grey;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.rsm{
+	width: 80%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	transition: opacity 0.8s;
+}
+.rsm:hover{
+	opacity: 0.6;
+}
+
+.baslik-h5{
+	margin: 10px;
+	color: #ba0048;
+}
+
+.icerik_text{
+	margin: 5px;
+	color: #321906;
+}
+
+.devami_oku:link{
+	display: block;
+	width: 150px;
+	height: 45px;
+	padding-right:10px 20px;
+	background-color: #ff8f3d;
+	text-decoration: none;
+	color: white;
+	margin: 15px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.devami_oku:hover{
+	opacity: 0.7;
+}
