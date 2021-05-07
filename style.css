@@ -1,3 +1,8 @@
+.urunler{
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+}
 .icerik{
 	width: 25%;
 	height: auto;
@@ -46,4 +51,15 @@
 
 .devami_oku:hover{
 	opacity: 0.7;
+}
+.sayfalama-kapsayici{
+	border:1px solid black;
+	width: 100%;
+	height: 100px;
+	display: inline-block;
+	text-align: center;
+}
+.sayfalama-metin{
+	font-size: 25px;
+	font-weight: bold;
 }
