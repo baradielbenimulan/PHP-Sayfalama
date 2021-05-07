@@ -12,12 +12,12 @@ rating for web pages
 
 
 ## Getting Started
-###((En)
+### (En)
 You can download the files and arrange them according to your own.
 I wrote down the way of working in it index.php.
 
 
-###(TR)
+### (TR)
 İndirip kendinize göre şekillendirebilirsiniz.
 index.php içinde detyalı şekilde yazdım çalışma şeklini.
 
