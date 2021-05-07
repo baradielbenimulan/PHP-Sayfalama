@@ -13,13 +13,11 @@ rating for web pages
 
 ## Getting Started
 ### (En)
-You can download the files and arrange them according to your own.
-I wrote down the way of working in it index.php.
+You can download the files and arrange them according to your own. I wrote down the way of working in it index.php.
 
 
 ### (TR)
-İndirip kendinize göre şekillendirebilirsiniz.
-index.php içinde detyalı şekilde yazdım çalışma şeklini.
+İndirip kendinize göre şekillendirebilirsiniz. index.php içinde detaylı şekilde yazdım çalışma şeklini.
 
 ### Installation
 1. Clone the repo
