@@ -18,7 +18,7 @@ $sayfalama_buton_sayisi = 2;
 3 4 5 6 7
 gibi
 */
-$sayfa_basina_gosterilecek_kayit_sayisi = 3;
+$sayfa_basina_gosterilecek_kayit_sayisi = 5;
 /* bir sayfada kaç ürün göstersin */
 
 
@@ -49,7 +49,7 @@ ve ona göre altta sayfalar görünecek
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="icon" type="imavge/icon" href="img/favicon.png">
-<title>Sayflama</title>
+<title>Sayfalama</title>
 </head>
 <body>
 <div class="urunler">
@@ -78,26 +78,42 @@ foreach ($kayit_degerleri as $kayitlar) {
 	<div class="sayfalama-buton">
 	<?php
 		if ($gelen_sayfa>1) {
-			echo '<span class="pasif"><a href="index.php?sayfa=1">"<<"</a></span>';
+			echo '<span class="pasif"><a href="index.php?sayfa=1"> << </a></span>';
 			$sayfayi_bir_geri_al = $gelen_sayfa-1;
 			/* en başa ve bir geri sayfaya gitme kodları*/
 			/* << ilk sayfa demek */
 
-			echo '<span class="pasif"><a href="index.php?sayfa='.$sayfayi_bir_geri_al.'">"<"</a></span>';
+			echo '<span class="pasif"><a href="index.php?sayfa='.$sayfayi_bir_geri_al.'"> < </a></span>';
 			/* < önceki sayfa demek */
 		}
 
 
+		/* sayfa değerlerini gösteren for döngüsü */
+		for (($sayfa_index_degeri=$gelen_sayfa-$sayfalama_buton_sayisi); ($sayfa_index_degeri<=$gelen_sayfa+$sayfalama_buton_sayisi); $sayfa_index_degeri++){
+
+			if (($sayfa_index_degeri>0) and ($sayfa_index_degeri<=$bulunan_sayfa_sayisi)){
+				/* eğer kullanıcı 1. sayfdaysa 0 ve -1 sayılarını gösterme*/
+				/* ya da son sayfaya giderse olmayan sayfa değerlerini gösterme*/
+				if ($sayfa_index_degeri==$gelen_sayfa){
+					echo " ".'<span class="aktif">'.$sayfa_index_degeri.'</span>'." ";
+					
+				}else{
+					echo '<span class="pasif"><a href="index.php?sayfa='.$sayfa_index_degeri.'">'.$sayfa_index_degeri.'</a></span>';
+				}
+				
+			}
+			
+		}
 
 
 		if ($gelen_sayfa!=$bulunan_sayfa_sayisi) {
 			
 			$sayfayi_bir_ileri_al = $gelen_sayfa+1;
-			/* sayfa değerini bir ileri aldık */ 
+			/* sayfa değerini bir ileri aldık */
+			echo '<span class="pasif"><a href="index.php?sayfa='.$sayfayi_bir_ileri_al.'"> > </a></span>'; 
 			/* > sonraki sayfa demek */
-			echo '<span class="pasif"><a href="index.php?sayfa='.$sayfayi_bir_ileri_al.'">">"</a></span>';
 
-			echo '<span class="pasif"><a href="index.php?sayfa='.$bulunan_sayfa_sayisi.'">">>"</a></span>';
+			echo '<span class="pasif"><a href="index.php?sayfa='.$bulunan_sayfa_sayisi.'"> >> </a></span>';
 			/* zaten bulunan sayfa sayısı belliydi. onu url kısmına verdik. */
 			/* >> son sayfa demek */
 		}
